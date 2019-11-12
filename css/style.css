@@ -1,0 +1,439 @@
+/* ========== CSS RESET ========== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+/* ============================== */
+
+
+/* ========== Base styling ========== */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../webfonts/proximanova-reg-webfont.woff2') format('woff2'),
+         url('../webfonts/proximanova-reg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../webfonts/proximanova-light-webfont.woff2') format('woff2'),
+         url('../webfonts/proximanova-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../webfonts/proximanova-bold-webfont.woff2') format('woff2'),
+         url('../webfonts/proximanova-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('../webfonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../webfonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url('../webfonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../webfonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('../webfonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../webfonts/roboto-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+body {
+    font-family: Roboto, Helvetica, Arial,sans-serif;
+    font-size: 16px;
+}
+.main-header, .main-footer{
+    height: 67px;
+    width: 100%;
+}
+
+/* Adjusting the wrapper display for header and footer */
+.main-header .wrapper, .main-footer .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+/* ============================== */
+
+
+/* ========== HEADER ========== */
+
+.main-header {
+    font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+    background: #f7c61d;
+}
+
+.wrapper {
+    height: 100%;
+    width: 1175px;
+    margin: 0 auto;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.main-header li {
+    text-transform: uppercase;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+
+.main-header li:hover a {
+    color: white;
+}
+
+/* ============================== */
+
+
+/* ========== MAIN ========== */
+
+/* Recent articles h2 */
+main>h2 {
+    font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+/* === */
+
+.wrapper{
+    display: flex;
+}
+
+/* Adjusting width of the main section and sidebar */
+main {
+    width: 77%;
+    border-right: 1px solid #dcdcdc;
+}
+
+aside {
+    width: 23%;
+    padding: 89px 0 0 33px;
+    box-sizing: border-box;
+
+}
+/* === */
+
+/* Articles */
+
+article {
+    display: flex;
+    margin-bottom: 60px;
+}
+article h2:hover, article h3:hover {
+    color: #e3b002;
+    cursor: pointer;
+}
+
+article h2 {
+    font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+/* Right part of the article */
+
+.meta {
+    font-size: 13px;
+    color: #999;
+    margin: 10px 0;
+}
+.meta span::after, .views::after {
+    content: "|";
+    font-size: inherit;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.meta span:last-child a, .comments a {
+    color: #e3b002;
+}
+.meta span:last-child::after {
+    content: none;
+}
+.description {
+    font-weight: 300;
+    line-height: 1.5;
+    color: #555555;
+}
+
+.description::after{
+    content: ">";
+    color: #e3b002;
+    display: inline;
+}
+
+.additional {
+    margin-top: 8px; 
+    color: #999;
+    font-size: 13px;    
+}
+
+.views .fa-eye {
+    margin-right: 10px; 
+}
+
+.comments .fa-comment {
+    margin-right: 8px;
+}
+
+/* More articles button */
+
+.more-articles {
+    height: 45px; 
+    width: 170px;
+    background: #ffffff;
+    border: 1px solid #e3b002;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    letter-spacing: .1em;
+    margin: 0 auto 85px auto;
+}
+
+.more-articles:hover {
+    background: #f7c61d;
+    color: white;
+}
+
+/* ============================== */
+
+
+/* ========== SIDEBAR ========== */
+
+
+.right-article {
+    padding: 0 30px 0 35px;
+    box-sizing: border-box;
+}
+
+/* Search input */
+.search-box {
+    width: 100%;
+    position: relative;
+}
+#search-input {
+    font-size: 14px; 
+    width: 100%;      
+    border-radius: 50px;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    padding: 8px 10px 8px 30px;
+    box-sizing: border-box;
+}
+
+.icon {
+    top: 8px;
+    left: 10px;
+    position: absolute;
+    z-index: 2;
+}
+/* === */
+
+/* Calendar */
+/* === */
+
+/* Popular news */
+
+.popular-news article {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.popular-news h2 {
+    margin-top: 45px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.popular-news h2::after {
+    content: ".";
+    font-size: 0;
+    display: block;
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    margin-left: 10px;  
+}
+
+.popular-news h3 {
+    line-height: 1.3;
+}
+/* Calendar */
+.calendar-widget {
+	border: 1px solid #e5e5e5;
+	width: 100%;
+	border-radius: 10px;
+	margin-top: 38px;
+}
+.calendar-widget .calendar-top {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 38px;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+}
+.calendar-prev, .calendar-next {
+	color: #e5e5e5;
+}
+.calendar-widget table {
+	width: calc(100% + 4px);
+	margin-left: -2px;
+	border-radius: 0 0 10px 10px;
+}
+.calendar-widget table th {
+	height: 26px;
+	background: #e7e7e7;
+	color: #888;
+	text-align: center;
+	vertical-align: middle;
+}
+.calendar-widget table td {
+	height: 33px; 
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #e5e5e5;
+	color: #e5e5e5;
+}
+.calendar-widget tr:last-child td:first-child {
+	border-radius: 0 0 0 10px;
+}
+.calendar-widget tr:last-child td:last-child {
+	border-radius: 0 0 10px 0;
+}
+.calendar-widget .current-month {
+	color: #4d4d4d;
+}
+.calendar-widget .current-day {
+	background-color: #f7c61d;
+	color: #fff;
+}
+
+/* ============================== */
+
+
+/* ========== FOOTER ========== */
+
+.main-footer {
+    font-size: 14px;
+    background: #f8cc33;
+}
+.main-footer>.wrapper> * {
+    width: 33.33%
+}
+
+/* Copyright */
+.copy {
+    color: #a78613;
+    font-size: 13px;
+    font-family: "Proxima Nova Light", Helvetica, Arial, sans-serif;
+}
+
+/* Footer nav */
+
+.footer-nav li {
+    padding: 0 18px;
+}
+
+.footer-nav li:hover a {
+    color: white;
+} 
+
+/* Social links */
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-social a{
+    display: block;
+    height: 45px;
+    width: 45px;
+    background: #ffffff;
+    border-radius: 50%;
+    color: #f8cc33;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px; 
+}
+
+.footer-social a:hover {
+    background: #000000;
+}
+/* ============================== */
