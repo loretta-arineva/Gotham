@@ -7,4 +7,4 @@ It was coded by looking at a Photoshop mockup.
 It is a blog, consisting of articles and a sidebar with a calendar, search bar and news.
 
 ### Author
-Kasai Senshi
+Loreta Krasteva
